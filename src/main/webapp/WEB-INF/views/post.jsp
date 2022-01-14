@@ -24,13 +24,11 @@
             <thead>
             <tr>
                 <th scope="col"></th>
-                <th scope="col">Автор</th>
                 <th scope="col">Сообщение</th>
             </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td><c:out value="${post.description}"/></td>
                 </tr>

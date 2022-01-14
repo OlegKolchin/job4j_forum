@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -25,7 +26,6 @@
             <tr>
                 <th scope="col"></th>
                 <th scope="col">Тема</th>
-                <th scope="col">Описание</th>
                 <th scope="col">Дата создания</th>
             </tr>
             </thead>
@@ -34,13 +34,12 @@
                 <tr>
                     <th scope="row"><a href="<c:url value='/edit?id=${post.id}'/>"><i class="fa fa-edit mr-3"></i></a></th>
                     <td><a href="<c:url value='/post?id=${post.id}'/>"><c:out value="${post.name}"/></a></td>
-                    <td><c:out value="${post.description}"/></td>
-                    <td><c:out value="${post.created}"/></td>
+                    <td><fmt:formatDate value="${post.created.time}" type="date" dateStyle="short" /></td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
-        <a href="<c:url value='/create?id=0'/>">Добавить инцидент</a>
+        <a href="<c:url value='/create?id=0'/>">Создать тему</a>
     </div>
 </div>
 

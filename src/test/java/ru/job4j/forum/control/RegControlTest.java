@@ -14,7 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 import ru.job4j.forum.Main;
 
-
 @SpringBootTest(classes = Main.class)
 @AutoConfigureMockMvc
 public class RegControlTest {
@@ -38,5 +37,4 @@ public class RegControlTest {
                 .andDo(print())
                 .andExpect(status().is3xxRedirection());
     }
-
 }

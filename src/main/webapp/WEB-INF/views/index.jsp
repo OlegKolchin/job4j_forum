@@ -18,6 +18,7 @@
 <body>
 <div>
     Login as : ${user.username}
+    <p><a href="<c:url value='/logout'/>">Выйти</a></p>
 </div>
 <div class="container mt-3">
     <div class="row">
